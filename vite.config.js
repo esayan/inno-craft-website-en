@@ -1,7 +1,10 @@
+
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Custom domain için:
 export default defineConfig({
-  base: '/inno-craft-website/',
+  base: '/',          // ÖNEMLİ: repo yolu değil, kök!
   plugins: [react()],
 })
