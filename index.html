@@ -1,11 +1,21 @@
 <head>
   <meta charset="UTF-8" />
-  image/png
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/png" href="/IC_logo.png?v=4" />
-<link rel="shortcut icon" href="/IC_logo.png?v=4" />
 
-  
+  <!-- Vite dev scripts (dev modda otomatik eklenir, silme) -->
+  <script type="module">
+    import RefreshRuntime from "/@react-refresh"
+    RefreshRuntime.injectIntoGlobalHook(window)
+    window.$RefreshReg$ = () => {}
+    window.$RefreshSig$ = () => (type) => type
+    window.__vite_plugin_react_preamble_installed__ = true
+  </script>
+  <script type="module" src="/@vite/client"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/IC_logo.png?v=4" />
+  <link rel="shortcut icon" href="/IC_logo.png?v=4" />
+
   <title>Inno-Craft | AI & Digital Consulting</title>
   <meta name="description" content="Inno-Craft delivers end-to-end Gen-AI, CRM, and Data solutions with measurable business impact." />
 
@@ -15,7 +25,4 @@
   <meta property="og:image" content="https://esayan.github.io/inno-craft-website-en/og.png" />
   <meta property="og:url" content="https://esayan.github.io/inno-craft-website-en/" />
   <meta property="og:type" content="website" />
-
-  <!-- (Optional) Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
 </head>
