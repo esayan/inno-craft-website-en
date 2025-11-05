@@ -1,131 +1,107 @@
 import {
-  people01,
-  people02,
-  people03,
-  facebook,
-  instagram,
-  linkedin,
-  twitter,
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
+  // icons
   send,
   shield,
   star,
+  // socials
+  linkedin,
 } from "../assets";
 
 /* ====== NAV ====== */
 export const navLinks = [
-  { id: "home",      title: "Home" },
-  { id: "services",  title: "Services" },
-  { id: "solutions", title: "Solutions" },
-  { id: "clients",   title: "Clients" },
-  { id: "contact",   title: "Contact" },
+  { id: "home",     title: "Home" },
+  { id: "services", title: "Our Services" },
+  { id: "about",    title: "Who we are?" },
+  { id: "contact",  title: "Contact Us" },
 ];
 
-/* ====== FEATURE CARDS (Homepage sections) ====== */
+/* ====== HERO / IMPACT STRIP (short, punchy wins) ====== */
+export const impact = [
+  { id: "impact-1", text: "Turn AI from slides into shipped products—in weeks, not months." },
+  { id: "impact-2", text: "Lift conversion & retention with AI-assisted journeys and CRM automation." },
+  { id: "impact-3", text: "Cut manual work with GenAI copilots; free people for higher-value tasks." },
+  { id: "impact-4", text: "Governance and security by design—scale AI with confidence." },
+];
+
+/* ====== FEATURES (What we do) ====== */
 export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Gen-AI Strategy & Use-Case Design",
+    title: "GenAI Awareness · Discovery · Build · Scale-up",
     content:
-      "Identify high-impact, feasible AI opportunities. We turn fuzzy ideas into clear roadmaps, KPIs, and quick wins.",
+      "From maturity assessment and use-case discovery to strategy, roadmap, implementation and scale-up. We identify the right use cases, define KPIs, build MVPs, and operationalize GenAI across teams.",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "Security, Privacy & Governance",
+    title: "AI-Focused Digital Transformation",
     content:
-      "Ship with confidence. We design solutions with data protection, compliance, and responsible AI built in.",
+      "AI-first redesign of people, organization, governance, technology, and processes. We assess current maturity, model the TO-BE, build the roadmap, and deliver implementation with measurable outcomes.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Build, Integrate & Launch Fast",
+    title: "CRM Salesforce Implementation",
     content:
-      "From PoC to production: we implement LLMs, CRM and Data products, integrate with your stack, and measure ROI.",
+      "End-to-end CRM: needs analysis, process design, Salesforce configuration & integration, data & analytics, enablement and ongoing care—so CRM becomes a growth engine, not just a database.",
   },
 ];
 
-/* ====== TESTIMONIALS ====== */
-export const feedback = [
-  {
-    id: "feedback-1",
-    content:
-      "Inno-Craft helped us choose the right Gen-AI use cases and delivered a working MVP in weeks.",
-    name: "Herman Jensen",
-    title: "Chief Digital Officer",
-    img: people01,
-  },
-  {
-    id: "feedback-2",
-    content:
-      "Their governance and security approach made stakeholders comfortable to scale AI across teams.",
-    name: "Steve Mark",
-    title: "Head of Technology",
-    img: people02,
-  },
-  {
-    id: "feedback-3",
-    content:
-      "Clear roadmap, measurable impact. Exactly the partner we needed to move from slides to shipped products.",
-    name: "Kenn Gallagher",
-    title: "VP, Product",
-    img: people03,
-  },
-];
+/* ====== ABOUT ====== */
+export const about = {
+  headline: "We craft AI-driven transformation.",
+  subline:
+    "Inno-Craft is a boutique consultancy focused on GenAI strategy & roadmap, Salesforce CRM implementation, and AI-first digital transformation.",
+  bullets: [
+    "Pragmatic roadmaps tied to KPIs",
+    "Responsible AI, governance & security baked in",
+    "From PoC to production and scale-up",
+  ],
+};
 
-/* ====== KPIs / STATS STRIP ====== */
+/* ====== TESTIMONIALS (keep empty until you have references) ====== */
+export const feedback = [];
+
+/* ====== KPIs / STATS (optional) ====== */
 export const stats = [
-  { id: "stats-1", title: "Projects Delivered", value: "40+" },
-  { id: "stats-2", title: "Enterprise Clients", value: "25+" },
-  { id: "stats-3", title: "Avg. ROI Uplift",   value: "3.5×" },
+  { id: "stats-1", title: "Core Practices", value: "GenAI · AI-DX · CRM" },
+  { id: "stats-2", title: "Delivery Focus", value: "Roadmap → MVP → Scale" },
+  { id: "stats-3", title: "Obsessed With", value: "Measurable ROI" },
 ];
 
-/* ====== FOOTER LINKS ====== */
+/* ====== FOOTER ====== */
 export const footerLinks = [
   {
-    title: "Company",
+    title: "Navigate",
     links: [
-      { name: "About", link: "#home" },
-      { name: "Services", link: "#services" },
-      { name: "Solutions", link: "#solutions" },
-      { name: "Clients", link: "#clients" },
-      { name: "Contact", link: "#contact" },
+      { name: "Home", link: "#home" },
+      { name: "Our Services", link: "#services" },
+      { name: "Who we are?", link: "#about" },
+      { name: "Contact Us", link: "#contact" },
     ],
   },
   {
-    title: "Resources",
+    title: "Services",
     links: [
-      { name: "Case Studies", link: "#solutions" },
-      { name: "Playbooks", link: "#services" },
-      { name: "Blog", link: "#" },
-      { name: "Privacy & Terms", link: "#" },
+      { name: "GenAI Awareness · Discovery · Build · Scale-up", link: "#services" },
+      { name: "AI-Focused Digital Transformation", link: "#services" },
+      { name: "CRM Salesforce Implementation", link: "#services" },
     ],
   },
   {
     title: "Get in touch",
     links: [
-      { name: "hello@inno-craft.com", link: "mailto:hello@inno-craft.com" },
-      { name: "LinkedIn", link: "https://www.linkedin.com/" },
+      { name: "esayan@inno-craft.com", link: "mailto:esayan@inno-craft.com" },
+      { name: "LinkedIn", link: "https://www.linkedin.com/in/enginsayan/" },
     ],
   },
 ];
 
-/* ====== SOCIAL ====== */
+/* ====== SOCIAL (LinkedIn only) ====== */
 export const socialMedia = [
-  { id: "social-media-1", icon: linkedin, link: "https://www.linkedin.com/" },
-  { id: "social-media-2", icon: twitter,  link: "https://www.twitter.com/" },
-  { id: "social-media-3", icon: facebook, link: "https://www.facebook.com/" },
-  { id: "social-media-4", icon: instagram,link: "https://www.instagram.com/" },
+  { id: "social-media-1", icon: linkedin, link: "https://www.linkedin.com/in/enginsayan/" },
 ];
 
-/* ====== CLIENT LOGOS (placeholder) ====== */
-export const clients = [
-  { id: "client-1", logo: airbnb },
-  { id: "client-2", logo: binance },
-  { id: "client-3", logo: coinbase },
-  { id: "client-4", logo: dropbox },
-];
+/* ====== CLIENT LOGOS (removed for now) ====== */
+export const clients = []; // keep empty; hide section in component if length===0
