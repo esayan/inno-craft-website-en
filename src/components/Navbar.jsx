@@ -15,12 +15,11 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
       {/* Logo */}
-      <img
-        src="/IC_logo.png"
-        alt="Inno-Craft"
-        className="w-[124px] h-[32px] object-contain"
-      />
-
+  <img
+  src="/IC_logo.png"
+  alt="Inno-Craft"
+  className="w-[180px] sm:w-[200px] md:w-[220px] h-auto object-contain"
+/>
       {/* Desktop Menu */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, i) => (
