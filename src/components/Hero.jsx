@@ -19,26 +19,35 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
             The Next <br className="sm:block hidden" />
-            <span className="text-gradient">Generation</span> of AI & Digital Consulting.
+            <span className="text-gradient">Generation</span> of AI Consulting
           </h1>
 
-        {/* Desktop CTA */}
+          {/* Desktop CTA */}
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted /> {/* (İstersen buton yazısını sonra değiştiririz) */}
+            <a href="mailto:esayan@inno-craft.com" aria-label="Contact Inno-Craft">
+              <GetStarted />
+            </a>
           </div>
         </div>
 
         {/* Subheadline */}
-        <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
-          From strategy to production.
-        </h1>
+        <h2 className="font-poppins font-semibold ss:text-[34px] text-[28px] text-white ss:leading-[48px] leading-[40px] w-full mt-3">
+          GenAI Strategy & Roadmap · AI-Focused Digital Transformation · Salesforce CRM
+        </h2>
 
         {/* Paragraph */}
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Inno-Craft helps companies design, build and ship Gen-AI, CRM and Data
-          solutions—end-to-end. From prototypes to production systems with
-          measurable business impact.
+        <p className={`${styles.paragraph} max-w-[520px] mt-5`}>
+          We help companies discover the right GenAI use cases, build MVPs, and scale them.
+          We redesign journeys and operating models with AI at the core, and deliver
+          end-to-end Salesforce implementations—turning strategy into production with measurable ROI.
         </p>
+
+        {/* Quick wins strip (kısa vurucu mesajlar) */}
+        <ul className="mt-6 space-y-2 text-dimWhite">
+          <li>• Ship GenAI products in weeks, not months.</li>
+          <li>• Lift conversion & retention with AI-assisted journeys and CRM automation.</li>
+          <li>• Governance & security by design to scale with confidence.</li>
+        </ul>
       </div>
 
       {/* Right: Visual */}
@@ -55,7 +64,9 @@ const Hero = () => {
 
       {/* Mobile CTA */}
       <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
+        <a href="mailto:esayan@inno-craft.com" aria-label="Contact Inno-Craft">
+          <GetStarted />
+        </a>
       </div>
     </section>
   );
