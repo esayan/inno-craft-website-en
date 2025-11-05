@@ -1,8 +1,7 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',   // custom domain + alt path senaryolarında güvenli
+  base: '/', // ✅ custom domain (ör. inno-craft.com) için doğru ayar
 })
