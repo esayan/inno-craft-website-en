@@ -1,22 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages (project pages) için base yolu repo adın olmalı:
-//  - GH Pages:  base: '/inno-craft-website-en/'
-//  - Custom domain (inno-craft.com): base: '/'
+// Custom domain için base kök olmalı:
 export default defineConfig({
   plugins: [react()],
-  base: '/inno-craft-website-en/',
+  base: '/',
 
-  // Build-time sabit yerleştirmeleri (bundle içindeki referansları çözer)
+  // Prod bundle'a sızan dev/HMR placeholder'larını build-time'da sabitle
   define: {
-    __DEFINES__: {},                 // <-- sorun çıkaran global yer tutucu
-    __DEV__: false,
-    'process.env': {},               // process.env.* erişimleri için boş obje
-    'process.env.NODE_ENV': JSON.stringify('production'),
+    __DEFINES__: '{}',
+    __DEV__: 'false',
+    'process.env': '{}',
+    'process.env.NODE_ENV': '"production"',
+
+    // HMR/dev kalıntıları ihtimaline karşı emniyet kemeri
+    __HMR_CONFIG_NAME__: '""',
+    __HMR_PROTOCOL__: '""',
+    __HMR_HOSTNAME__: '""',
+    __HMR_PORT__: '""',
+    __HMR_BASE__: '""',
+    __HMR_TIMEOUT__: '30000',
   },
 
-  build: {
-    minify: 'esbuild',
-  },
+  build: { minify: 'esbuild' },
 })
