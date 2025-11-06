@@ -1,25 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Custom domain için base kök olmalı:
+// Custom domain (www.inno-craft.com) yayını için:
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/', // custom domain için kök
 
-  // Prod bundle'a sızan dev/HMR placeholder'larını build-time'da sabitle
+  // Prod bundle'a sızan HMR/dev placeholder'larını build-time'da İNLINE ET
+  // (Bu anahtarlar derleme sırasında gerçek JS literallerine çevrilir)
   define: {
-    __DEFINES__: '{}',
-    __DEV__: 'false',
-    'process.env': '{}',
-    'process.env.NODE_ENV': '"production"',
+    __DEV__: false,
+    __DEFINES__: {},
 
-    // HMR/dev kalıntıları ihtimaline karşı emniyet kemeri
-    __HMR_CONFIG_NAME__: '""',
-    __HMR_PROTOCOL__: '""',
-    __HMR_HOSTNAME__: '""',
-    __HMR_PORT__: '""',
-    __HMR_BASE__: '""',
-    __HMR_TIMEOUT__: '30000',
+    __HMR_CONFIG_NAME__: JSON.stringify(''),
+    __HMR_PROTOCOL__:   JSON.stringify(''),
+    __HMR_HOSTNAME__:   JSON.stringify(''),
+    __HMR_PORT__:       JSON.stringify(''),
+    __HMR_BASE__:       JSON.stringify(''),
+    __HMR_TIMEOUT__:    30000,
+
+    'process.env': {},
+    'process.env.NODE_ENV': JSON.stringify('production'),
   },
 
   build: { minify: 'esbuild' },
