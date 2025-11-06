@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Vite dev scripts (dev modda otomatik eklenir, silme) -->
+  <!-- Vite dev scripts (dev'de kalır, prod'da çıkar) -->
   <script type="module">
     import RefreshRuntime from "/@react-refresh"
     RefreshRuntime.injectIntoGlobalHook(window)
@@ -12,25 +12,18 @@
   </script>
   <script type="module" src="/@vite/client"></script>
 
-  <!-- Favicon -->
+  <!-- Favicon / Meta / OG ... -->
   <link rel="icon" type="image/png" href="/IC_logo.png?v=4" />
   <link rel="shortcut icon" href="/IC_logo.png?v=4" />
-
   <title>Inno-Craft | AI & Digital Consulting</title>
   <meta name="description" content="Inno-Craft delivers end-to-end Gen-AI, CRM, and Data solutions with measurable business impact." />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Inno-Craft Consulting" />
   <meta property="og:description" content="Gen-AI, CRM & Data projects from strategy to production." />
   <meta property="og:image" content="https://esayan.github.io/inno-craft-website-en/og.png" />
   <meta property="og:url" content="https://esayan.github.io/inno-craft-website-en/" />
   <meta property="og:type" content="website" />
-</head>
 
-<body>
-  <div id="root"></div>
-
-  <!-- ✅ DevTools shim (React/Preact injectIntoGlobalHook fix) -->
+  <!-- ✅ DevTools shim: assets JS’ten ÖNCE çalışmalı -->
   <script>
     window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.__REACT_DEVTOOLS_GLOBAL_HOOK__ || {};
     window.__REACT_DEVTOOLS_GLOBAL_HOOK__.injectIntoGlobalHook = function () {};
@@ -39,6 +32,10 @@
     window.__REACT_DEVTOOLS_GLOBAL_HOOK__.onCommitFiberUnmount = function () {};
   </script>
 
-  <!-- Senin ana giriş dosyan -->
+  <!-- Giriş dosyan: build'te assets JS'e dönüştürülür ve bu satırın YERİ korunur -->
   <script type="module" src="/src/main.jsx"></script>
+</head>
+
+<body>
+  <div id="root"></div>
 </body>
