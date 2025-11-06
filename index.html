@@ -23,51 +23,47 @@
   <meta property="og:url" content="https://esayan.github.io/inno-craft-website-en/" />
   <meta property="og:type" content="website" />
 
-<script>
-  (function (g) {
-    var HOOK = g.__REACT_DEVTOOLS_GLOBAL_HOOK__ || {};
+  <!-- 1) DEFINES stub: bazı paketlerin beklediği global değişkenler -->
+  <script>
+    // Derleme sonrası nadiren boş kalan yer tutucular için emniyet kemeri
+    var __DEFINES__ = (typeof __DEFINES__ !== 'undefined') ? __DEFINES__ : {};
+    if (typeof window !== 'undefined') {
+      if (typeof window.process === 'undefined') window.process = { env: {} };
+      if (typeof window.__DEV__ === 'undefined') window.__DEV__ = false;
+    }
+  </script>
 
-    // Bazı paketler bu alanları bekliyor:
-    if (!HOOK.renderers) HOOK.renderers = new Map();     // React renderer'lar için
-    if (!HOOK.helpers)   HOOK.helpers   = new Map();     // Devtools yardımcıları
-    if (!HOOK.listeners) HOOK.listeners = [];            // Olay dinleyicileri
-    if (!HOOK.supportsFiber) HOOK.supportsFiber = true;
+  <!-- 2) DevTools shim: injectIntoGlobalHook ve arkadaşları için no-op/struct -->
+  <script>
+    (function (g) {
+      var HOOK = g.__REACT_DEVTOOLS_GLOBAL_HOOK__ || {};
+      if (!HOOK.renderers) HOOK.renderers = new Map();
+      if (!HOOK.helpers)   HOOK.helpers   = new Map();
+      if (!HOOK.listeners) HOOK.listeners = [];
+      if (!HOOK.supportsFiber) HOOK.supportsFiber = true;
 
-    // Güvenli no-op fonksiyonlar:
-    if (typeof HOOK.inject !== 'function') {
-      HOOK.inject = function () { return 0; };
-    }
-    if (typeof HOOK.onCommitFiberRoot !== 'function') {
-      HOOK.onCommitFiberRoot = function () {};
-    }
-    if (typeof HOOK.onCommitFiberUnmount !== 'function') {
-      HOOK.onCommitFiberUnmount = function () {};
-    }
-    if (typeof HOOK.sub !== 'function') {
-      // dinleyici ekler; geri dönüşte unsubscribe fonksiyonu döner
-      HOOK.sub = function (fn) {
-        HOOK.listeners.push(fn);
-        return function () {
-          var i = HOOK.listeners.indexOf(fn);
-          if (i >= 0) HOOK.listeners.splice(i, 1);
+      if (typeof HOOK.inject !== 'function') HOOK.inject = function () { return 0; };
+      if (typeof HOOK.onCommitFiberRoot !== 'function') HOOK.onCommitFiberRoot = function () {};
+      if (typeof HOOK.onCommitFiberUnmount !== 'function') HOOK.onCommitFiberUnmount = function () {};
+      if (typeof HOOK.sub !== 'function') {
+        HOOK.sub = function (fn) {
+          HOOK.listeners.push(fn);
+          return function () {
+            var i = HOOK.listeners.indexOf(fn);
+            if (i >= 0) HOOK.listeners.splice(i, 1);
+          };
         };
-      };
-    }
+      }
+      if (typeof HOOK.injectIntoGlobalHook !== 'function') {
+        HOOK.injectIntoGlobalHook = function (global) {
+          global.__REACT_DEVTOOLS_GLOBAL_HOOK__ = HOOK;
+        };
+      }
+      g.__REACT_DEVTOOLS_GLOBAL_HOOK__ = HOOK;
+    })(typeof globalThis !== 'undefined' ? globalThis : window);
+  </script>
 
-    // Bazı bundler’lar bu fonksiyonu çağırıyor:
-    if (typeof HOOK.injectIntoGlobalHook !== 'function') {
-      HOOK.injectIntoGlobalHook = function (global) {
-        // Sadece global’e hook’u yerleştir; başka iş yapma
-        global.__REACT_DEVTOOLS_GLOBAL_HOOK__ = HOOK;
-      };
-    }
-
-    // Son olarak global'e yaz:
-    g.__REACT_DEVTOOLS_GLOBAL_HOOK__ = HOOK;
-  })(typeof globalThis !== 'undefined' ? globalThis : window);
-</script>
-
-  <!-- Giriş dosyan: build'te assets JS'e dönüştürülür ve bu satırın YERİ korunur -->
+  <!-- 3) Giriş dosyan: build'te assets JS'e dönüşür; bu satırın konumu korunur -->
   <script type="module" src="/src/main.jsx"></script>
 </head>
 
