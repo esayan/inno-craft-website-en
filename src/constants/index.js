@@ -11,7 +11,6 @@ import {
 export const navLinks = [
   { id: "home",     title: "Home" },
   { id: "services", title: "Our Services" },
-  { id: "about",    title: "Who we are?" },
   { id: "contact",  title: "Contact Us" },
 ];
 
@@ -77,7 +76,6 @@ export const footerLinks = [
     links: [
       { name: "Home", link: "#home" },
       { name: "Our Services", link: "#services" },
-      { name: "Who we are?", link: "#about" },
       { name: "Contact Us", link: "#contact" },
     ],
   },
