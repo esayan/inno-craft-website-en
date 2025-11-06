@@ -7,7 +7,6 @@ const Navbar = () => {
   const navLinks = [
     { id: "home",     title: "Home",          href: "#home" },
     { id: "services", title: "Our Services",  href: "#services" },
-    { id: "about",    title: "Who we are?",   href: "#about" },
     // Contact Us tıklanınca e-posta açılır
     { id: "contact",  title: "Contact Us",    href: "mailto:esayan@inno-craft.com" },
   ];
