@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Vite dev scripts (dev'de kalır, prod'da çıkar) -->
+  <!-- Vite dev scripts (yalnız dev'de çalışır; prod build'te çıkar) -->
   <script type="module">
     import RefreshRuntime from "/@react-refresh"
     RefreshRuntime.injectIntoGlobalHook(window)
@@ -12,7 +12,7 @@
   </script>
   <script type="module" src="/@vite/client"></script>
 
-  <!-- Favicon / Meta / OG ... -->
+  <!-- Favicon / Meta / OG -->
   <link rel="icon" type="image/png" href="/IC_logo.png?v=4" />
   <link rel="shortcut icon" href="/IC_logo.png?v=4" />
   <title>Inno-Craft | AI & Digital Consulting</title>
@@ -23,17 +23,7 @@
   <meta property="og:url" content="https://esayan.github.io/inno-craft-website-en/" />
   <meta property="og:type" content="website" />
 
-  <!-- 1) DEFINES stub: bazı paketlerin beklediği global değişkenler -->
-  <script>
-    // Derleme sonrası nadiren boş kalan yer tutucular için emniyet kemeri
-    var __DEFINES__ = (typeof __DEFINES__ !== 'undefined') ? __DEFINES__ : {};
-    if (typeof window !== 'undefined') {
-      if (typeof window.process === 'undefined') window.process = { env: {} };
-      if (typeof window.__DEV__ === 'undefined') window.__DEV__ = false;
-    }
-  </script>
-
-  <!-- 2) DevTools shim: injectIntoGlobalHook ve arkadaşları için no-op/struct -->
+  <!-- DevTools shim: prod'da injectIntoGlobalHook çağrılarını güvenli no-op'a düşür -->
   <script>
     (function (g) {
       var HOOK = g.__REACT_DEVTOOLS_GLOBAL_HOOK__ || {};
@@ -63,7 +53,7 @@
     })(typeof globalThis !== 'undefined' ? globalThis : window);
   </script>
 
-  <!-- 3) Giriş dosyan: build'te assets JS'e dönüşür; bu satırın konumu korunur -->
+  <!-- Giriş dosyan: build'te assets JS'e dönüşür; bu satırın yeri korunur -->
   <script type="module" src="/src/main.jsx"></script>
 </head>
 
