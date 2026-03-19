@@ -1,72 +1,164 @@
 import {
-  // icons
   send,
   shield,
   star,
-  // socials
   linkedin,
 } from "../assets";
 
 /* ====== NAV ====== */
 export const navLinks = [
-  { id: "home",     title: "Home" },
-  { id: "services", title: "Our Services" },
-  { id: "contact",  title: "Contact Us" },
+  { id: "home", title: "Home" },
+  { id: "services", title: "Services" },
+  { id: "framework", title: "Framework" },
+  { id: "engagement", title: "How We Engage" },
+  { id: "impact", title: "Impact" },
+  { id: "about", title: "About" },
+  { id: "contact", title: "Contact" },
 ];
 
-/* ====== HERO / IMPACT STRIP (short, punchy wins) ====== */
-export const impact = [
-  { id: "impact-1", text: "Turn AI from slides into shipped products—in weeks, not months." },
-  { id: "impact-2", text: "Lift conversion & retention with AI-assisted journeys and CRM automation." },
-  { id: "impact-3", text: "Cut manual work with GenAI copilots; free people for higher-value tasks." },
-  { id: "impact-4", text: "Governance and security by design—scale AI with confidence." },
+/* ====== HERO ROTATING WORDS ====== */
+export const heroRotatingLines = [
+  "Train your teams on AI & Agentic workflows",
+  "Architect enterprise-grade Agentic solutions",
+  "Deliver AI strategy to production at scale",
+  "Staff your Salesforce & technology projects",
 ];
 
-/* ====== FEATURES (What we do) ====== */
-export const features = [
+/* ====== STATS (Hero strip) ====== */
+export const stats = [
+  { id: "stats-1", value: "$4–6x", title: "ROI per $1 invested in AI" },
+  { id: "stats-2", value: "100+", title: "Enterprise Clients" },
+  { id: "stats-3", value: "10+", title: "Industry Sectors" },
+  { id: "stats-4", value: "30~", title: "Years Experience" },
+];
+
+/* ====== SERVICES (5 domains) ====== */
+export const services = [
   {
-    id: "feature-1",
+    id: "service-1",
     icon: star,
-    title: "GenAI Awareness · Discovery · Build · Scale-up",
+    title: "AI Strategy & Governance",
     content:
-      "From maturity assessment and use-case discovery to strategy, roadmap, implementation and scale-up. We identify the right use cases, define KPIs, build MVPs, and operationalize GenAI across teams.",
+      "Enterprise AI vision & roadmap, maturity assessments, AI policy & governance model design, risk classification & regulatory compliance (EU AI Act, ISO 42001), and AI Center of Excellence (CoE) design.",
   },
   {
-    id: "feature-2",
+    id: "service-2",
     icon: shield,
-    title: "AI-Focused Digital Transformation",
+    title: "Agentic AI & Intelligent Automation",
     content:
-      "AI-first redesign of people, organization, governance, technology, and processes. We assess current maturity, model the TO-BE, build the roadmap, and deliver implementation with measurable outcomes.",
+      "GenAI MVP & pilot implementations, RAG-based enterprise applications, agentic workflow design & deployment, model validation, bias detection, explainability, and MLOps / LLMOps implementation.",
   },
   {
-    id: "feature-3",
+    id: "service-3",
     icon: send,
-    title: "CRM Salesforce Implementation",
+    title: "Customer Intelligence & CRM",
     content:
-      "End-to-end CRM: needs analysis, process design, Salesforce configuration & integration, data & analytics, enablement and ongoing care—so CRM becomes a growth engine, not just a database.",
+      "AI-powered CRM strategy, Salesforce & CX transformation, marketing automation & personalization, Customer 360 analytics, and Next Best Action systems.",
+  },
+  {
+    id: "service-4",
+    icon: star,
+    title: "Data & Cloud Foundations for AI",
+    content:
+      "Cloud transformation & migration, enterprise data architecture, OT-IT integration (IoT / IIoT), IT cost optimization, and enterprise application modernization.",
+  },
+  {
+    id: "service-5",
+    icon: shield,
+    title: "Staffing & Talent Services",
+    content:
+      "Salesforce.com certified specialists, AI/ML engineers, data engineers, cloud architects, project managers — we find and place the right resource for your technology projects.",
   },
 ];
 
-/* ====== ABOUT ====== */
-export const about = {
-  headline: "We craft AI-driven transformation.",
-  subline:
-    "Inno-Craft is a boutique consultancy focused on GenAI strategy & roadmap, Salesforce CRM implementation, and AI-first digital transformation.",
-  bullets: [
-    "Pragmatic roadmaps tied to KPIs",
-    "Responsible AI, governance & security baked in",
-    "From PoC to production and scale-up",
+/* ====== 7P FRAMEWORK ====== */
+export const frameworkPillars = [
+  { id: "p-1", name: "Purpose", items: ["Strategy", "Vision", "Value Alignment", "Prioritization"] },
+  { id: "p-2", name: "Process", items: ["Use-Case Definition", "Risk Classification", "MLOps / LLMOps"] },
+  { id: "p-3", name: "Protection", items: ["Governance", "Risk & Security", "Compliance", "Ethical AI"] },
+  { id: "p-4", name: "Playbook", items: ["Standards & Runbooks", "Operating Model", "Guardrails"] },
+  { id: "p-5", name: "Performance", items: ["KPIs & ROI Metrics", "Drift Monitoring", "Improvement Cycles"] },
+  { id: "p-6", name: "Platform", items: ["AI Architecture", "Data Foundation", "RAG & Agents Stack"] },
+  { id: "p-7", name: "People", items: ["AI Literacy & Talent", "Culture & RACI", "Governance Boards"] },
+];
+
+/* ====== HOW WE ENGAGE (4 steps) ====== */
+export const engagementSteps = [
+  {
+    id: "step-1",
+    step: "01",
+    title: "AI Maturity Diagnostic",
+    description: "Comprehensive assessment of AI capabilities, data readiness, governance maturity, and organizational preparedness.",
+    deliverable: "AI Maturity Scorecard & Gap Analysis Report",
+    timeline: "2–4 weeks",
+  },
+  {
+    id: "step-2",
+    step: "02",
+    title: "Opportunity Mapping Workshop",
+    description: "Executive-facilitated workshop to identify high-value AI use cases, assess feasibility, and build a prioritized portfolio.",
+    deliverable: "Prioritized Use-Case Portfolio with ROI Estimates",
+    timeline: "1–2 weeks",
+  },
+  {
+    id: "step-3",
+    step: "03",
+    title: "AI Transformation Roadmap",
+    description: "Detailed transformation roadmap covering strategy, governance, technology, people, and delivery milestones.",
+    deliverable: "Enterprise AI Transformation Roadmap",
+    timeline: "3–6 weeks",
+  },
+  {
+    id: "step-4",
+    step: "04",
+    title: "Implementation & Governance Setup",
+    description: "Hands-on delivery of pilot AI initiatives with full governance framework, monitoring, and scale-up planning.",
+    deliverable: "Production AI Solution & Governance Operating Model",
+    timeline: "4–12 weeks",
+  },
+];
+
+/* ====== BUSINESS IMPACT ====== */
+export const impactStats = [
+  { id: "imp-1", value: "30%", label: "Reduction in Operational Costs", sub: "Process automation and AI-driven optimization" },
+  { id: "imp-2", value: "20%", label: "Improvement in Customer Retention", sub: "Predictive analytics and next-best-action engines" },
+  { id: "imp-3", value: "3x", label: "Faster Decision Cycles", sub: "Real-time analytics and AI-powered insights" },
+  { id: "imp-4", value: "50%", label: "Accelerated AI Adoption", sub: "Structured governance and change management" },
+];
+
+export const clientEngagements = [
+  { id: "ce-1", sector: "Aviation", type: "Data & AI Transformation", desc: "Identified high-impact automation opportunities; built feasibility-ROI portfolio; delivered actionable roadmap." },
+  { id: "ce-2", sector: "Finance & Investment", type: "GenAI Strategy", desc: "Enterprise-wide GenAI roadmap; executive workshops; ROI-driven use-case prioritization." },
+  { id: "ce-3", sector: "Mining", type: "Advanced Analytics", desc: "Demand forecasting; real-time operational analytics; cost reduction through predictive planning." },
+  { id: "ce-4", sector: "Healthcare", type: "Advanced Analytics", desc: "Capacity and revenue optimization; physician performance analytics; data-driven decision culture." },
+  { id: "ce-5", sector: "Insurance", type: "AI-Based Assessment", desc: "Deep learning image recognition; automated cost estimation; reduced manual intervention." },
+  { id: "ce-6", sector: "Multi-Sector Holding", type: "AI Governance", desc: "Group-wide AI governance framework; risk classifications; AI Excellence Center structure." },
+];
+
+/* ====== ABOUT / LEADERSHIP ====== */
+export const founderProfile = {
+  name: "Engin Sayan",
+  title: "Founder & AI Transformation Leader",
+  stats: [
+    { label: "Years Experience", value: "30~" },
+    { label: "Years in AI", value: "10+" },
+    { label: "Industry Sectors", value: "10+" },
+    { label: "Enterprise Clients", value: "100+" },
+  ],
+  education: "Bogazici University — MBA & Computer Engineering",
+  certs: "PMP, ITIL, eTOM, TAM",
+  career: [
+    { company: "KPMG Turkiye", role: "Partner, Next Generation Solutions Leader", desc: "Led AI, cloud, and digital transformation programs. Sponsored GenAI initiatives, Salesforce CRM programs, and government cloud strategy." },
+    { company: "IBM Turkiye", role: "Cognitive Process Transformation Country Leader", desc: "Led consulting teams across advanced analytics, AI, and customer experience. Delivered CRM modernization and digital marketing automation." },
+    { company: "Turkcell & Turkcell Technology", role: "Digital Channels & CRM Unit Manager", desc: "Led modernization of digital channels, CRM, and SFA applications. Delivered 37 projects as part of the 3G transformation program." },
+    { company: "Vodafone Turkiye", role: "Business Intelligence Senior Manager", desc: "Led CRM, BI, data warehouse, and data operations teams. Managed enterprise data transformation programs." },
   ],
 };
 
-/* ====== TESTIMONIALS (keep empty until you have references) ====== */
-export const feedback = [];
-
-/* ====== KPIs / STATS (optional) ====== */
-export const stats = [
-  { id: "stats-1", title: "Core Practices", value: "GenAI · AI-DX · CRM" },
-  { id: "stats-2", title: "Delivery Focus", value: "Roadmap → MVP → Scale" },
-  { id: "stats-3", title: "Obsessed With", value: "Measurable ROI" },
+export const positioning = [
+  "We are not an AI experiment lab.",
+  "We are not an IT outsourcing company.",
+  "We are an AI Operating Model partner for enterprises.",
 ];
 
 /* ====== FOOTER ====== */
@@ -75,31 +167,31 @@ export const footerLinks = [
     title: "Navigate",
     links: [
       { name: "Home", link: "#home" },
-      { name: "Our Services", link: "#services" },
-      { name: "Contact Us", link: "#contact" },
+      { name: "Services", link: "#services" },
+      { name: "Framework", link: "#framework" },
+      { name: "How We Engage", link: "#engagement" },
     ],
   },
   {
     title: "Services",
     links: [
-      { name: "GenAI Awareness · Discovery · Build · Scale-up", link: "#services" },
-      { name: "AI-Focused Digital Transformation", link: "#services" },
-      { name: "CRM Salesforce Implementation", link: "#services" },
+      { name: "AI Strategy & Governance", link: "#services" },
+      { name: "Agentic AI & Automation", link: "#services" },
+      { name: "CRM & Salesforce", link: "#services" },
+      { name: "Staffing & Talent", link: "#services" },
     ],
   },
   {
-    title: "Get in touch",
+    title: "Get in Touch",
     links: [
       { name: "esayan@inno-craft.com", link: "mailto:esayan@inno-craft.com" },
+      { name: "+90 507 048 0418", link: "tel:+905070480418" },
       { name: "LinkedIn", link: "https://www.linkedin.com/in/enginsayan/" },
     ],
   },
 ];
 
-/* ====== SOCIAL (LinkedIn only) ====== */
+/* ====== SOCIAL ====== */
 export const socialMedia = [
   { id: "social-media-1", icon: linkedin, link: "https://www.linkedin.com/in/enginsayan/" },
 ];
-
-/* ====== CLIENT LOGOS (removed for now) ====== */
-export const clients = []; // keep empty; hide section in component if length===0
