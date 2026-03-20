@@ -31,7 +31,7 @@ const App = () => {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+      <main className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
           <Services />
@@ -42,7 +42,7 @@ const App = () => {
           <Contact />
           <Footer />
         </div>
-      </div>
+      </main>
     </div>
   );
 };

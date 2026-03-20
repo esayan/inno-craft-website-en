@@ -9,7 +9,7 @@ const ServiceCard = ({ icon, title, content, index }) => (
     } border border-[#1c1c2e] hover:border-secondary/30 transition-colors`}
   >
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue mb-4`}>
-      <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
+      <img src={icon} alt={`${title} icon`} className="w-[50%] h-[50%] object-contain" />
     </div>
     <h4 className="font-poppins font-semibold text-white text-[20px] leading-[28px] mb-2">
       {title}

@@ -62,7 +62,8 @@ const Hero = () => {
         <p className={`${styles.paragraph} max-w-[560px] mt-6`}>
           AI-Native digital transformation consulting. We help enterprises move from AI ambition
           to scalable, governed, enterprise-grade execution — powered by our proprietary
-          7P Agentic Enterprise Framework.
+          7P Agentic Enterprise Framework. Specializing in Gen-AI, Agentic AI agents, Salesforce CRM,
+          and staffing services.
         </p>
 
         {/* CTA Buttons */}

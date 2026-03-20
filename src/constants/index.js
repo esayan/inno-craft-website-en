@@ -18,10 +18,10 @@ export const navLinks = [
 
 /* ====== HERO ROTATING WORDS ====== */
 export const heroRotatingLines = [
-  "Train your teams on AI & Agentic workflows",
-  "Architect enterprise-grade Agentic solutions",
-  "Deliver AI strategy to production at scale",
-  "Staff your Salesforce & technology projects",
+  "Train your teams on AI & Agentic AI workflows",
+  "Architect enterprise-grade Agentic AI agents",
+  "Deliver Gen-AI strategy to production at scale",
+  "Staff your Salesforce CRM & technology projects",
 ];
 
 /* ====== STATS (Hero strip) ====== */
@@ -46,14 +46,14 @@ export const services = [
     icon: shield,
     title: "Agentic AI & Intelligent Automation",
     content:
-      "GenAI MVP & pilot implementations, RAG-based enterprise applications, agentic workflow design & deployment, model validation, bias detection, explainability, and MLOps / LLMOps implementation.",
+      "Gen-AI MVP & pilot implementations, RAG-based enterprise applications, agentic AI agents workflow design & deployment, model validation, bias detection, explainability, and MLOps / LLMOps implementation.",
   },
   {
     id: "service-3",
     icon: send,
-    title: "Customer Intelligence & CRM",
+    title: "Customer Intelligence & Salesforce CRM",
     content:
-      "AI-powered CRM strategy, Salesforce & CX transformation, marketing automation & personalization, Customer 360 analytics, and Next Best Action systems.",
+      "AI-powered CRM strategy, Salesforce CRM consulting & CX transformation, marketing automation & personalization, Customer 360 analytics, and Next Best Action systems.",
   },
   {
     id: "service-4",
@@ -67,7 +67,7 @@ export const services = [
     icon: shield,
     title: "Staffing & Talent Services",
     content:
-      "Salesforce.com certified specialists, AI/ML engineers, data engineers, cloud architects, project managers — we find and place the right resource for your technology projects.",
+      "Salesforce certified specialists, AI/ML engineers, Gen-AI agents developers, data engineers, cloud architects, project managers — staffing the right talent for your Salesforce, AI, and technology projects.",
   },
 ];
 
@@ -177,8 +177,8 @@ export const footerLinks = [
     links: [
       { name: "AI Strategy & Governance", link: "#services" },
       { name: "Agentic AI & Automation", link: "#services" },
-      { name: "CRM & Salesforce", link: "#services" },
-      { name: "Staffing & Talent", link: "#services" },
+      { name: "Salesforce CRM Consulting", link: "#services" },
+      { name: "AI & Salesforce Staffing", link: "#services" },
     ],
   },
   {

@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
+    <footer className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-start mr-10">
           <img
@@ -58,7 +58,7 @@ const Footer = () => {
             >
               <img
                 src={social.icon}
-                alt={social.id}
+                alt="Inno-Craft on LinkedIn"
                 className={`w-[21px] h-[21px] object-contain cursor-pointer ${
                   index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
                 }`}
@@ -67,7 +67,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
