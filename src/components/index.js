@@ -5,6 +5,7 @@ import Services from "./Services";
 import Framework from "./Framework";
 import HowWeEngage from "./HowWeEngage";
 import Impact from "./Impact";
+import Ventures from "./Ventures";
 import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -17,6 +18,7 @@ export {
   Framework,
   HowWeEngage,
   Impact,
+  Ventures,
   About,
   Contact,
   Footer,

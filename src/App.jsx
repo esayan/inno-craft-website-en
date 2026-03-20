@@ -1,49 +1,16 @@
 import React from "react";
-import {
-  Navbar,
-  Hero,
-  Stats,
-  Services,
-  Framework,
-  HowWeEngage,
-  Impact,
-  About,
-  Contact,
-  Footer,
-} from "./components";
-import styles from "./style";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 const App = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
-      {/* NAVBAR */}
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
-
-      {/* HERO */}
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero />
-        </div>
-      </div>
-
-      {/* MAIN CONTENT */}
-      <main className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Stats />
-          <Services />
-          <Framework />
-          <HowWeEngage />
-          <Impact />
-          <About />
-          <Contact />
-          <Footer />
-        </div>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfUse />} />
+    </Routes>
   );
 };
 

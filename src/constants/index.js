@@ -12,6 +12,7 @@ export const navLinks = [
   { id: "framework", title: "Framework" },
   { id: "engagement", title: "How We Engage" },
   { id: "impact", title: "Impact" },
+  { id: "ventures", title: "Labs" },
   { id: "about", title: "About" },
   { id: "contact", title: "Contact" },
 ];
@@ -170,6 +171,7 @@ export const footerLinks = [
       { name: "Services", link: "#services" },
       { name: "Framework", link: "#framework" },
       { name: "How We Engage", link: "#engagement" },
+      { name: "Inno-Craft Labs", link: "#ventures" },
     ],
   },
   {

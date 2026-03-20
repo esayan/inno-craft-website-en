@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../style";
 import { footerLinks, socialMedia } from "../constants";
 
@@ -16,6 +17,14 @@ const Footer = () => {
           />
           <p className={`${styles.paragraph} mt-4 max-w-[360px]`}>
             AI-Native Digital Transformation Consulting. From AI ambition to enterprise execution.
+          </p>
+          <p className="font-poppins text-dimWhite text-[14px] mt-3">
+            Inno-Craft develops and supports AI-powered software, digital
+            products, and interactive applications for business and innovation
+            use cases.
+          </p>
+          <p className="font-poppins text-dimWhite text-[13px] mt-2">
+            Dubai-based innovation and consulting company
           </p>
         </div>
 
@@ -42,7 +51,24 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
+      {/* Legal links */}
+      <div className="w-full flex justify-center items-center gap-6 py-4 border-t-[1px] border-t-[#3F3E45]">
+        <Link
+          to="/privacy"
+          className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"
+        >
+          Privacy Policy
+        </Link>
+        <span className="text-dimWhite text-[14px]">|</span>
+        <Link
+          to="/terms"
+          className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"
+        >
+          Terms of Use
+        </Link>
+      </div>
+
+      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-4 border-t-[1px] border-t-[#3F3E45]">
         <p className="font-poppins font-normal text-center text-[16px] leading-[27px] text-white">
           &copy; {year} Inno-Craft. All Rights Reserved.
         </p>

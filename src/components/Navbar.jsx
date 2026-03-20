@@ -1,19 +1,24 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { close, menu } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const navHref = (id) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <a href="#home">
+      <Link to="/">
         <img
           src="/IC_logo_hd.png"
           alt="Inno-Craft"
           className="w-[160px] sm:w-[180px] md:w-[200px] h-auto object-contain"
         />
-      </a>
+      </Link>
 
       {/* Desktop */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -24,7 +29,7 @@ const Navbar = () => {
               i === navLinks.length - 1 ? "mr-0" : "mr-8"
             }`}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <a href={navHref(nav.id)}>{nav.title}</a>
           </li>
         ))}
       </ul>
@@ -51,7 +56,7 @@ const Navbar = () => {
                   i === navLinks.length - 1 ? "mb-0" : "mb-4"
                 }`}
               >
-                <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
+                <a href={navHref(nav.id)} onClick={() => setToggle(false)}>
                   {nav.title}
                 </a>
               </li>
