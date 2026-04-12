@@ -66,6 +66,13 @@ const Footer = () => {
         >
           Terms of Use
         </Link>
+        <span className="text-dimWhite text-[14px]">|</span>
+        <Link
+          to="/gameprivacy"
+          className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"
+        >
+          Mobile Game Privacy
+        </Link>
       </div>
 
       <div className="w-full flex justify-between items-center md:flex-row flex-col pt-4 border-t-[1px] border-t-[#3F3E45]">
