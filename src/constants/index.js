@@ -197,3 +197,172 @@ export const footerLinks = [
 export const socialMedia = [
   { id: "social-media-1", icon: linkedin, link: "https://www.linkedin.com/in/enginsayan/" },
 ];
+
+/* ====== AI READINESS QUIZ ====== */
+export const quizQuestions = [
+  {
+    id: "q1",
+    category: "Purpose",
+    question: "How would you describe your organization's AI strategy?",
+    options: [
+      { text: "We haven't discussed AI strategy yet", score: 1 },
+      { text: "We've explored AI ideas but nothing formal", score: 2 },
+      { text: "We have a documented AI strategy with clear goals", score: 3 },
+      { text: "AI is embedded in our corporate strategy with executive sponsorship", score: 4 },
+    ],
+  },
+  {
+    id: "q2",
+    category: "Process",
+    question: "How mature are your AI workflows and processes?",
+    options: [
+      { text: "No defined AI processes exist", score: 1 },
+      { text: "We run ad-hoc AI experiments without standard processes", score: 2 },
+      { text: "We have standardized pipelines for some AI use cases", score: 3 },
+      { text: "We have MLOps/LLMOps with CI/CD, monitoring, and automated retraining", score: 4 },
+    ],
+  },
+  {
+    id: "q3",
+    category: "Protection",
+    question: "How do you handle AI governance and data security?",
+    options: [
+      { text: "We haven't considered AI-specific governance", score: 1 },
+      { text: "We rely on general IT security policies", score: 2 },
+      { text: "We have AI-specific risk assessment and data governance frameworks", score: 3 },
+      { text: "Full AI governance with bias detection, explainability, and regulatory compliance", score: 4 },
+    ],
+  },
+  {
+    id: "q4",
+    category: "Playbook",
+    question: "What is your approach to implementing AI solutions?",
+    options: [
+      { text: "We haven't implemented any AI solutions", score: 1 },
+      { text: "Individual teams experiment independently", score: 2 },
+      { text: "We follow a structured playbook with defined stages and guardrails", score: 3 },
+      { text: "Enterprise-wide operating model with reusable patterns and centers of excellence", score: 4 },
+    ],
+  },
+  {
+    id: "q5",
+    category: "Performance",
+    question: "How do you measure AI initiative success?",
+    options: [
+      { text: "We don't measure AI performance", score: 1 },
+      { text: "We track basic metrics like accuracy on a case-by-case basis", score: 2 },
+      { text: "We have defined KPIs and ROI frameworks for AI projects", score: 3 },
+      { text: "Continuous monitoring with drift detection, A/B testing, and business impact dashboards", score: 4 },
+    ],
+  },
+  {
+    id: "q6",
+    category: "Platform",
+    question: "What is the state of your technology infrastructure for AI?",
+    options: [
+      { text: "Legacy systems with no cloud or AI-ready infrastructure", score: 1 },
+      { text: "Some cloud adoption but data is siloed across systems", score: 2 },
+      { text: "Modern cloud platform with data lake and basic ML capabilities", score: 3 },
+      { text: "Full AI stack with vector DBs, RAG, agentic frameworks, and real-time pipelines", score: 4 },
+    ],
+  },
+  {
+    id: "q7",
+    category: "People",
+    question: "How AI-ready is your team and organizational culture?",
+    options: [
+      { text: "No AI skills or awareness across the organization", score: 1 },
+      { text: "A few enthusiasts exploring AI on their own", score: 2 },
+      { text: "Dedicated AI team with ongoing training programs", score: 3 },
+      { text: "AI-literate workforce with cross-functional AI champions and governance boards", score: 4 },
+    ],
+  },
+];
+
+export const quizLevels = [
+  {
+    id: "beginner",
+    name: "Beginner",
+    range: [7, 12],
+    emoji: "🌱",
+    color: "#f97316",
+    description: "Your AI journey is just beginning. There's massive untapped potential waiting to be unlocked.",
+    recommendation: "Start with an AI Maturity Diagnostic to identify quick wins and build a solid foundation.",
+  },
+  {
+    id: "explorer",
+    name: "Explorer",
+    range: [13, 18],
+    emoji: "🔍",
+    color: "#eab308",
+    description: "You're experimenting with AI but lack structure. A clear roadmap will accelerate your progress significantly.",
+    recommendation: "An Opportunity Mapping Workshop can help you prioritize high-value use cases with clear ROI.",
+  },
+  {
+    id: "advanced",
+    name: "Advanced",
+    range: [19, 23],
+    emoji: "🚀",
+    color: "#22c55e",
+    description: "Strong foundations are in place. Now it's time to scale AI across the enterprise and maximize ROI.",
+    recommendation: "Focus on enterprise-wide AI governance and scaling your most successful pilots.",
+  },
+  {
+    id: "leader",
+    name: "Leader",
+    range: [24, 28],
+    emoji: "👑",
+    color: "#00f6ff",
+    description: "You're at the forefront of AI adoption. Keep pushing boundaries with agentic AI and advanced architectures.",
+    recommendation: "Explore Agentic AI workflows and next-generation architectures to maintain your competitive edge.",
+  },
+];
+
+/* ====== AI STACK BUILDER ====== */
+export const stackLayers = [
+  { id: "infrastructure", name: "Infrastructure", icon: "🏗️", color: "#6366f1" },
+  { id: "data", name: "Data", icon: "🗄️", color: "#8b5cf6" },
+  { id: "ai-ml", name: "AI / ML", icon: "🧠", color: "#ec4899" },
+  { id: "application", name: "Application", icon: "📱", color: "#00f6ff" },
+];
+
+export const stackComponents = [
+  { id: "cloud", name: "Cloud Platform", layer: "infrastructure", icon: "☁️", desc: "AWS, Azure, or GCP" },
+  { id: "onprem", name: "On-Premise", layer: "infrastructure", icon: "🏢", desc: "Local data centers" },
+  { id: "hybrid", name: "Hybrid Cloud", layer: "infrastructure", icon: "🔄", desc: "Best of both worlds" },
+  { id: "edge", name: "Edge Computing", layer: "infrastructure", icon: "📡", desc: "Near-device processing" },
+
+  { id: "datalake", name: "Data Lake", layer: "data", icon: "🌊", desc: "Raw data storage at scale" },
+  { id: "warehouse", name: "Data Warehouse", layer: "data", icon: "📊", desc: "Structured analytics store" },
+  { id: "streaming", name: "Streaming Pipeline", layer: "data", icon: "⚡", desc: "Real-time data ingestion" },
+  { id: "vectordb", name: "Vector Database", layer: "data", icon: "🔢", desc: "Embeddings & similarity search" },
+
+  { id: "llm", name: "LLM / Foundation Model", layer: "ai-ml", icon: "💬", desc: "GPT, Claude, Gemini, etc." },
+  { id: "rag", name: "RAG Engine", layer: "ai-ml", icon: "📚", desc: "Retrieval-augmented generation" },
+  { id: "mlpipeline", name: "ML Pipeline", layer: "ai-ml", icon: "⚙️", desc: "Training & inference pipeline" },
+  { id: "agentic", name: "Agentic Workflow", layer: "ai-ml", icon: "🤖", desc: "Autonomous AI agents" },
+
+  { id: "crm", name: "CRM Integration", layer: "application", icon: "👥", desc: "Salesforce, HubSpot, etc." },
+  { id: "api", name: "API Gateway", layer: "application", icon: "🔌", desc: "Service orchestration" },
+  { id: "dashboard", name: "Dashboard / BI", layer: "application", icon: "📈", desc: "Analytics & reporting" },
+  { id: "chatbot", name: "Chatbot / Copilot", layer: "application", icon: "💡", desc: "User-facing AI interface" },
+];
+
+export const stackSynergies = [
+  { combo: ["vectordb", "rag"], bonus: 10, label: "Vector DB + RAG = Powerful knowledge retrieval" },
+  { combo: ["llm", "agentic"], bonus: 10, label: "LLM + Agentic = Autonomous AI workflows" },
+  { combo: ["streaming", "edge"], bonus: 8, label: "Streaming + Edge = Real-time intelligence" },
+  { combo: ["cloud", "datalake"], bonus: 6, label: "Cloud + Data Lake = Scalable data foundation" },
+  { combo: ["rag", "chatbot"], bonus: 8, label: "RAG + Chatbot = Intelligent knowledge assistant" },
+  { combo: ["crm", "llm"], bonus: 7, label: "CRM + LLM = AI-powered customer intelligence" },
+  { combo: ["mlpipeline", "warehouse"], bonus: 6, label: "ML Pipeline + Warehouse = Structured ML training" },
+  { combo: ["agentic", "api"], bonus: 8, label: "Agentic + API = Orchestrated autonomous actions" },
+  { combo: ["cloud", "streaming"], bonus: 5, label: "Cloud + Streaming = Elastic real-time processing" },
+  { combo: ["dashboard", "warehouse"], bonus: 5, label: "Dashboard + Warehouse = Data-driven decisions" },
+];
+
+export const stackWarnings = [
+  { combo: ["onprem", "streaming"], message: "Consider cloud or hybrid for real-time streaming at scale" },
+  { combo: ["edge", "datalake"], message: "Edge + Data Lake may need careful data sync strategy" },
+  { combo: ["onprem", "agentic"], message: "Agentic AI often benefits from cloud-scale compute" },
+];

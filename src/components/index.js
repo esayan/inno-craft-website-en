@@ -5,6 +5,7 @@ import Services from "./Services";
 import Framework from "./Framework";
 import HowWeEngage from "./HowWeEngage";
 import Impact from "./Impact";
+import InteractiveTools from "./InteractiveTools";
 import Ventures from "./Ventures";
 import About from "./About";
 import Contact from "./Contact";
@@ -18,6 +19,7 @@ export {
   Framework,
   HowWeEngage,
   Impact,
+  InteractiveTools,
   Ventures,
   About,
   Contact,

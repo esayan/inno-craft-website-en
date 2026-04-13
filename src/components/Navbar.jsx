@@ -32,6 +32,14 @@ const Navbar = () => {
             <a href={navHref(nav.id)}>{nav.title}</a>
           </li>
         ))}
+        <li className="ml-8">
+          <Link
+            to="/quiz"
+            className="py-2 px-4 bg-blue-gradient font-poppins font-medium text-[13px] text-primary rounded-[8px] hover:opacity-90 transition-opacity"
+          >
+            AI Quiz
+          </Link>
+        </li>
       </ul>
 
       {/* Mobile */}
@@ -49,18 +57,25 @@ const Navbar = () => {
           } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[180px] rounded-xl sidebar z-[100]`}
         >
           <ul className="list-none flex flex-col justify-end items-start flex-1">
-            {navLinks.map((nav, i) => (
+            {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
-                  i === navLinks.length - 1 ? "mb-0" : "mb-4"
-                }`}
+                className="font-poppins font-normal cursor-pointer text-[16px] text-white mb-4"
               >
                 <a href={navHref(nav.id)} onClick={() => setToggle(false)}>
                   {nav.title}
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/quiz"
+                onClick={() => setToggle(false)}
+                className="py-2 px-4 bg-blue-gradient font-poppins font-medium text-[13px] text-primary rounded-[8px]"
+              >
+                AI Quiz
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

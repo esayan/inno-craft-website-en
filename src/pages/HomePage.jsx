@@ -7,6 +7,7 @@ import {
   Framework,
   HowWeEngage,
   Impact,
+  InteractiveTools,
   Ventures,
   About,
   Contact,
@@ -39,6 +40,7 @@ const HomePage = () => {
           <Framework />
           <HowWeEngage />
           <Impact />
+          <InteractiveTools />
           <Ventures />
           <About />
           <Contact />
