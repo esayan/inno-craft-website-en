@@ -33,7 +33,7 @@ const GamePrivacy = () => {
               <strong className="text-white">Dungeon Adventure BloodEclipse</strong>
             </p>
             <p className="font-poppins text-dimWhite text-[16px] mb-1">
-              Last updated: April 12, 2026
+              Last updated: April 27, 2026
             </p>
             <p className="font-poppins text-dimWhite text-[16px] mb-10">
               Developed by Inno-Craft LLC
@@ -44,16 +44,18 @@ const GamePrivacy = () => {
                 <p className={styles.paragraph}>
                   Inno-Craft LLC ("we", "our", or "us") operates the mobile game{" "}
                   <strong className="text-white">Dungeon Adventure BloodEclipse</strong>{" "}
-                  (the "App"). This page informs you of our policies regarding the
-                  collection, use, and disclosure of personal data when you use our App.
+                  (the "App"), available on the Apple App Store and Google Play.
+                  This page informs you of our policies regarding the
+                  collection, use, and disclosure of personal data when you use
+                  our App on iOS or Android devices.
                 </p>
               </Section>
 
               <Section title="2. Data We Collect">
                 <p className={styles.paragraph}>
-                  We do not directly collect or store personal data. However,
-                  third-party services integrated into the App may collect certain
-                  data automatically:
+                  We do not directly collect or store personal data on our own
+                  servers. However, third-party services integrated into the
+                  App may collect certain data automatically:
                 </p>
 
                 <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
@@ -61,13 +63,13 @@ const GamePrivacy = () => {
                 </h3>
                 <p className={styles.paragraph}>
                   We use Unity Ads (provided by Unity Technologies) to display
-                  advertisements. Unity Ads may collect:
+                  advertisements on both iOS and Android. Unity Ads may collect:
                 </p>
                 <ul className="list-disc list-inside mt-3 space-y-1">
-                  <Li>Device identifiers (IDFA on iOS, with your permission)</Li>
+                  <Li>Device identifiers (IDFA on iOS with your permission; Android Advertising ID on Android)</Li>
                   <Li>IP address</Li>
-                  <Li>Device type, OS version</Li>
-                  <Li>Ad interaction data (impressions, clicks)</Li>
+                  <Li>Device type, OS version, language, country</Li>
+                  <Li>Ad interaction data (impressions, clicks, completion events)</Li>
                 </ul>
                 <p className={`${styles.paragraph} mt-3`}>
                   Unity Ads Privacy Policy:{" "}
@@ -82,12 +84,12 @@ const GamePrivacy = () => {
                 </p>
 
                 <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
-                  Apple In-App Purchases
+                  Apple In-App Purchases (iOS)
                 </h3>
                 <p className={styles.paragraph}>
-                  We offer in-app purchases processed entirely by Apple. We do not
-                  collect or store your payment information. Apple handles all
-                  transactions securely.
+                  On iOS, we offer in-app purchases processed entirely by Apple
+                  via StoreKit. We do not collect or store your payment
+                  information. Apple handles all transactions securely.
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
                   Apple Privacy Policy:{" "}
@@ -100,48 +102,92 @@ const GamePrivacy = () => {
                     https://www.apple.com/legal/privacy
                   </a>
                 </p>
+
+                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
+                  Google Play Billing (Android)
+                </h3>
+                <p className={styles.paragraph}>
+                  On Android, we offer in-app purchases processed entirely by
+                  Google via Google Play Billing. We do not collect or store
+                  your payment information. Google handles all transactions
+                  securely.
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
+                  Google Privacy Policy:{" "}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary hover:underline"
+                  >
+                    https://policies.google.com/privacy
+                  </a>
+                </p>
               </Section>
 
-              <Section title="3. App Tracking Transparency (iOS)">
+              <Section title="3. App Tracking & Advertising Identifiers">
+                <h3 className="font-poppins font-medium text-white text-[18px] mt-1 mb-2">
+                  iOS — App Tracking Transparency (ATT)
+                </h3>
                 <p className={styles.paragraph}>
-                  On iOS 14.5 and later, we request your permission before accessing
-                  your device's advertising identifier (IDFA). You can change your
-                  preference at any time in:
+                  On iOS 14.5 and later, we request your permission before
+                  accessing your device's advertising identifier (IDFA), as
+                  required by Apple's App Tracking Transparency framework. You
+                  can change your preference at any time in:
                 </p>
                 <p className="font-poppins text-white text-[16px] mt-3 font-medium">
                   Settings &rarr; Privacy & Security &rarr; Tracking
                 </p>
+
+                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
+                  Android — Advertising ID
+                </h3>
+                <p className={styles.paragraph}>
+                  On Android, the App may use your Android Advertising ID
+                  (AAID) for advertising and analytics purposes via Unity Ads.
+                  You can reset or opt out of personalized advertising at any
+                  time in:
+                </p>
+                <p className="font-poppins text-white text-[16px] mt-3 font-medium">
+                  Settings &rarr; Google &rarr; Ads
+                </p>
                 <p className={`${styles.paragraph} mt-3`}>
-                  If you decline tracking, you will still see ads, but they will not
-                  be personalized.
+                  If you decline tracking or opt out, you will still see ads,
+                  but they will not be personalized.
                 </p>
               </Section>
 
               <Section title="4. Children's Privacy">
                 <p className={styles.paragraph}>
-                  Our App is not directed to children under the age of 13. We do not
-                  knowingly collect personal information from children under 13. If
-                  you believe your child has provided personal data, please contact
-                  us and we will take steps to remove that information.
+                  Our App is not directed to children under the age of 13 (or
+                  the equivalent minimum age in the relevant jurisdiction). We
+                  do not knowingly collect personal information from children.
+                  If you believe a child has provided personal data, please
+                  contact us and we will take steps to remove that information.
+                  We comply with the Google Play Families Policy and Apple's
+                  Kids Category requirements where applicable.
                 </p>
               </Section>
 
               <Section title="5. Data Retention">
                 <p className={styles.paragraph}>
-                  We do not retain personal data on our own servers. Data collected
-                  by third-party services (Unity Ads, Apple) is subject to their
-                  respective retention policies.
+                  We do not retain personal data on our own servers. Data
+                  collected by third-party services (Unity Ads, Apple, Google)
+                  is subject to their respective retention policies linked
+                  above.
                 </p>
               </Section>
 
               <Section title="6. Your Rights">
                 <p className={styles.paragraph}>
-                  Depending on your location, you may have the right to:
+                  Depending on your location (e.g., EEA, UK, California), you
+                  may have the right to:
                 </p>
                 <ul className="list-disc list-inside mt-3 space-y-1">
                   <Li>Access the personal data held about you</Li>
-                  <Li>Request deletion of your personal data</Li>
+                  <Li>Request correction or deletion of your personal data</Li>
                   <Li>Opt out of personalized advertising</Li>
+                  <Li>Withdraw consent at any time</Li>
                 </ul>
                 <p className={`${styles.paragraph} mt-3`}>
                   To exercise these rights regarding Unity Ads data, visit:{" "}
@@ -154,17 +200,50 @@ const GamePrivacy = () => {
                     https://unity.com/legal/privacy-policy
                   </a>
                 </p>
-              </Section>
-
-              <Section title="7. Changes to This Policy">
-                <p className={styles.paragraph}>
-                  We may update this Privacy Policy from time to time. We will notify
-                  you of any changes by updating the "Last updated" date at the top
-                  of this page.
+                <p className={`${styles.paragraph} mt-3`}>
+                  For Google-related data, visit:{" "}
+                  <a
+                    href="https://myaccount.google.com/data-and-privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary hover:underline"
+                  >
+                    https://myaccount.google.com/data-and-privacy
+                  </a>
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
+                  For Apple-related data, visit:{" "}
+                  <a
+                    href="https://privacy.apple.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary hover:underline"
+                  >
+                    https://privacy.apple.com
+                  </a>
                 </p>
               </Section>
 
-              <Section title="8. Contact Us">
+              <Section title="7. Data Security">
+                <p className={styles.paragraph}>
+                  We take reasonable measures to protect any data processed
+                  through the App. However, no method of transmission over the
+                  internet or electronic storage is 100% secure. While we
+                  strive to use commercially acceptable means to protect your
+                  data, we cannot guarantee its absolute security.
+                </p>
+              </Section>
+
+              <Section title="8. Changes to This Policy">
+                <p className={styles.paragraph}>
+                  We may update this Privacy Policy from time to time. We will
+                  notify you of any changes by updating the "Last updated" date
+                  at the top of this page. Continued use of the App after such
+                  changes constitutes acceptance of the updated policy.
+                </p>
+              </Section>
+
+              <Section title="9. Contact Us">
                 <p className={styles.paragraph}>
                   If you have any questions about this Privacy Policy, please contact us:
                 </p>
