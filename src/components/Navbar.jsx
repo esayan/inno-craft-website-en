@@ -22,23 +22,32 @@ const Navbar = () => {
 
       {/* Desktop */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, i) => (
+        {navLinks.map((nav) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[15px] text-white hover:text-secondary transition-colors ${
-              i === navLinks.length - 1 ? "mr-0" : "mr-8"
-            }`}
+            className="font-poppins font-normal cursor-pointer text-[15px] text-white hover:text-secondary transition-colors mr-6"
           >
             <a href={navHref(nav.id)}>{nav.title}</a>
           </li>
         ))}
-        <li className="ml-8">
+        <li className="font-poppins font-normal cursor-pointer text-[15px] text-white hover:text-secondary transition-colors mr-6">
+          <a href="/trust-compact/">Trust Compact</a>
+        </li>
+        <li className="mr-3">
           <Link
             to="/quiz"
             className="py-2 px-4 bg-blue-gradient font-poppins font-medium text-[13px] text-primary rounded-[8px] hover:opacity-90 transition-opacity"
           >
             AI Quiz
           </Link>
+        </li>
+        <li>
+          <a
+            href={navHref("ventures")}
+            className="py-2 px-4 font-poppins font-medium text-[13px] text-secondary border border-secondary/50 rounded-[8px] hover:bg-secondary/10 transition-colors"
+          >
+            Play BloodEclipse
+          </a>
         </li>
       </ul>
 
@@ -67,7 +76,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li>
+            <li className="font-poppins font-normal cursor-pointer text-[16px] text-white mb-4">
+              <a href="/trust-compact/" onClick={() => setToggle(false)}>
+                Trust Compact
+              </a>
+            </li>
+            <li className="mb-3">
               <Link
                 to="/quiz"
                 onClick={() => setToggle(false)}
@@ -75,6 +89,15 @@ const Navbar = () => {
               >
                 AI Quiz
               </Link>
+            </li>
+            <li>
+              <a
+                href={navHref("ventures")}
+                onClick={() => setToggle(false)}
+                className="py-2 px-4 font-poppins font-medium text-[13px] text-secondary border border-secondary/50 rounded-[8px] inline-block"
+              >
+                Play BloodEclipse
+              </a>
             </li>
           </ul>
         </div>
