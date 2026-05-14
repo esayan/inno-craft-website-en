@@ -52,7 +52,14 @@ const Footer = () => {
       </div>
 
       {/* Legal links */}
-      <div className="w-full flex justify-center items-center gap-6 py-4 border-t-[1px] border-t-[#3F3E45]">
+      <div className="w-full flex justify-center items-center gap-6 py-4 border-t-[1px] border-t-[#3F3E45] flex-wrap">
+        <a
+          href="/trust-compact/"
+          className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"
+        >
+          Trust Compact
+        </a>
+        <span className="text-dimWhite text-[14px]">|</span>
         <Link
           to="/privacy"
           className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"

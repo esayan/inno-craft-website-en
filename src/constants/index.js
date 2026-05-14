@@ -172,6 +172,7 @@ export const footerLinks = [
       { name: "Framework", link: "#framework" },
       { name: "How We Engage", link: "#engagement" },
       { name: "Inno-Craft Labs", link: "#ventures" },
+      { name: "Trust Compact", link: "/trust-compact/" },
     ],
   },
   {
