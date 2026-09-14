@@ -3,6 +3,23 @@ import { Link } from "react-router-dom";
 import styles from "../style";
 import { Navbar, Footer } from "../components";
 
+const GAMES = [
+  {
+    name: "Dungeon Adventure BloodEclipse",
+    platforms: "iOS (App Store), Android (Google Play)",
+    ads: "Unity Ads",
+    purchases: "Yes — Apple / Google",
+    servers: "None",
+  },
+  {
+    name: "Kampus: Istanbul",
+    platforms: "Android, Windows, macOS, Linux",
+    ads: "None",
+    purchases: "None",
+    servers: "None",
+  },
+];
+
 const GamePrivacy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,14 +43,15 @@ const GamePrivacy = () => {
               &larr; Back to Home
             </Link>
 
-            <h1 className="font-poppins font-semibold text-white text-[42px] leading-[52px] mb-2">
-              Privacy Policy
+            <h1 className="font-poppins font-semibold text-white text-[42px] leading-[52px] mb-3">
+              Game Privacy Policy
             </h1>
-            <p className="font-poppins text-dimWhite text-[16px] mb-2">
-              <strong className="text-white">Dungeon Adventure BloodEclipse</strong>
-            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge>Dungeon Adventure BloodEclipse</Badge>
+              <Badge>Kampus: Istanbul</Badge>
+            </div>
             <p className="font-poppins text-dimWhite text-[16px] mb-1">
-              Last updated: April 27, 2026
+              Last updated: September 14, 2026
             </p>
             <p className="font-poppins text-dimWhite text-[16px] mb-10">
               Developed by Inno-Craft LLC
@@ -42,25 +60,69 @@ const GamePrivacy = () => {
             <div className="space-y-8 max-w-[800px]">
               <Section title="1. Introduction">
                 <p className={styles.paragraph}>
-                  Inno-Craft LLC ("we", "our", or "us") operates the mobile game{" "}
-                  <strong className="text-white">Dungeon Adventure BloodEclipse</strong>{" "}
-                  (the "App"), available on the Apple App Store and Google Play.
-                  This page informs you of our policies regarding the
-                  collection, use, and disclosure of personal data when you use
-                  our App on iOS or Android devices.
+                  Inno-Craft LLC ("we", "our", or "us") develops and publishes
+                  the games listed below (each an "App", together the "Apps").
+                  This page explains our policies regarding the collection,
+                  use, and disclosure of personal data when you use our Apps.
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
+                  The Apps differ in what they do and do not collect, so each
+                  section below states which App it applies to. Where a section
+                  is marked for one App only, it does not apply to the other.
                 </p>
               </Section>
 
-              <Section title="2. Data We Collect">
-                <p className={styles.paragraph}>
+              <Section title="2. Games Covered by This Policy">
+                <div className="mt-1 overflow-x-auto">
+                  <table className="w-full min-w-[620px] border-collapse text-left">
+                    <thead>
+                      <tr className="border-b border-[#2c2c3e]">
+                        <Th>Game</Th>
+                        <Th>Platforms</Th>
+                        <Th>Advertising</Th>
+                        <Th>In-app purchases</Th>
+                        <Th>Accounts / our servers</Th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {GAMES.map((game) => (
+                        <tr key={game.name} className="border-b border-[#2c2c3e]">
+                          <Td className="text-white font-medium">{game.name}</Td>
+                          <Td>{game.platforms}</Td>
+                          <Td>{game.ads}</Td>
+                          <Td>{game.purchases}</Td>
+                          <Td>{game.servers}</Td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className={`${styles.paragraph} mt-4`}>
+                  Neither App requires you to create an account, and neither
+                  App sends personal data to servers operated by Inno-Craft
+                  LLC. We do not operate any backend that stores player data.
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
+                  Kampus: Istanbul additionally requires no internet connection
+                  at all: it is ad-free, purchase-free, and plays entirely on
+                  your device.
+                </p>
+              </Section>
+
+              <Section title="3. Data We Collect">
+                <h3 className="font-poppins font-medium text-white text-[18px] mt-1 mb-2">
+                  Dungeon Adventure BloodEclipse
+                </h3>
+                <AppliesTo>Dungeon Adventure BloodEclipse only</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
                   We do not directly collect or store personal data on our own
-                  servers. However, third-party services integrated into the
+                  servers. However, third-party services integrated into this
                   App may collect certain data automatically:
                 </p>
 
-                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
+                <h4 className="font-poppins font-medium text-white text-[17px] mt-5 mb-2">
                   Unity Ads
-                </h3>
+                </h4>
                 <p className={styles.paragraph}>
                   We use Unity Ads (provided by Unity Technologies) to display
                   advertisements on both iOS and Android. Unity Ads may collect:
@@ -73,19 +135,14 @@ const GamePrivacy = () => {
                 </ul>
                 <p className={`${styles.paragraph} mt-3`}>
                   Unity Ads Privacy Policy:{" "}
-                  <a
-                    href="https://unity.com/legal/privacy-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://unity.com/legal/privacy-policy">
                     https://unity.com/legal/privacy-policy
-                  </a>
+                  </ExtLink>
                 </p>
 
-                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
+                <h4 className="font-poppins font-medium text-white text-[17px] mt-5 mb-2">
                   Apple In-App Purchases (iOS)
-                </h3>
+                </h4>
                 <p className={styles.paragraph}>
                   On iOS, we offer in-app purchases processed entirely by Apple
                   via StoreKit. We do not collect or store your payment
@@ -93,19 +150,14 @@ const GamePrivacy = () => {
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
                   Apple Privacy Policy:{" "}
-                  <a
-                    href="https://www.apple.com/legal/privacy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://www.apple.com/legal/privacy">
                     https://www.apple.com/legal/privacy
-                  </a>
+                  </ExtLink>
                 </p>
 
-                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
+                <h4 className="font-poppins font-medium text-white text-[17px] mt-5 mb-2">
                   Google Play Billing (Android)
-                </h3>
+                </h4>
                 <p className={styles.paragraph}>
                   On Android, we offer in-app purchases processed entirely by
                   Google via Google Play Billing. We do not collect or store
@@ -114,19 +166,66 @@ const GamePrivacy = () => {
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
                   Google Privacy Policy:{" "}
-                  <a
-                    href="https://policies.google.com/privacy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://policies.google.com/privacy">
                     https://policies.google.com/privacy
-                  </a>
+                  </ExtLink>
                 </p>
+
+                <div className="mt-8 pt-6 border-t border-[#2c2c3e]">
+                  <h3 className="font-poppins font-medium text-white text-[18px] mb-2">
+                    Kampus: Istanbul
+                  </h3>
+                  <AppliesTo>Kampus: Istanbul only</AppliesTo>
+                  <p className={`${styles.paragraph} mt-3`}>
+                    Kampus: Istanbul is a single-player story game that runs{" "}
+                    <strong className="text-white">
+                      fully offline
+                    </strong>
+                    . No internet connection is required to play it, and it
+                    contains{" "}
+                    <strong className="text-white">
+                      no ads, no advertising or analytics SDKs, no in-app
+                      purchases, and no account system
+                    </strong>
+                    . Nothing in the game is locked behind a payment and there
+                    are no paid advantages — every character, choice, and
+                    ending is reached by playing. The game does not transmit
+                    any data to us or to any third party, and it does not
+                    request network, location, contacts, camera, or microphone
+                    permissions.
+                  </p>
+                  <p className={`${styles.paragraph} mt-3`}>
+                    The following information is created by you while playing
+                    and is stored{" "}
+                    <strong className="text-white">
+                      only on your own device
+                    </strong>
+                    , inside the game's local save files:
+                  </p>
+                  <ul className="list-disc list-inside mt-3 space-y-1">
+                    <Li>The player name you type at the start of the game (this can be any name or nickname you choose)</Li>
+                    <Li>In-game choices you select (department, story decisions, relationship progress, unlocked codex entries)</Li>
+                    <Li>Save slots, progress, and screenshots of save points generated by the game</Li>
+                    <Li>Game settings such as text speed, audio volume, and language</Li>
+                  </ul>
+                  <p className={`${styles.paragraph} mt-3`}>
+                    We never see this information. You can delete all of it at
+                    any time by deleting your save files from the in-game load
+                    screen, by clearing the app's storage in your device
+                    settings, or by uninstalling the game.
+                  </p>
+                </div>
               </Section>
 
-              <Section title="3. App Tracking & Advertising Identifiers">
-                <h3 className="font-poppins font-medium text-white text-[18px] mt-1 mb-2">
+              <Section title="4. App Tracking & Advertising Identifiers">
+                <AppliesTo>Dungeon Adventure BloodEclipse only</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
+                  Kampus: Istanbul does not use advertising identifiers and
+                  does not track you across apps or websites, so this section
+                  does not apply to it.
+                </p>
+
+                <h3 className="font-poppins font-medium text-white text-[18px] mt-5 mb-2">
                   iOS — App Tracking Transparency (ATT)
                 </h3>
                 <p className={styles.paragraph}>
@@ -157,9 +256,10 @@ const GamePrivacy = () => {
                 </p>
               </Section>
 
-              <Section title="4. Children's Privacy">
-                <p className={styles.paragraph}>
-                  Our App is not directed to children under the age of 13 (or
+              <Section title="5. Children's Privacy">
+                <AppliesTo>Both games</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
+                  Our Apps are not directed to children under the age of 13 (or
                   the equivalent minimum age in the relevant jurisdiction). We
                   do not knowingly collect personal information from children.
                   If you believe a child has provided personal data, please
@@ -167,19 +267,40 @@ const GamePrivacy = () => {
                   We comply with the Google Play Families Policy and Apple's
                   Kids Category requirements where applicable.
                 </p>
-              </Section>
-
-              <Section title="5. Data Retention">
-                <p className={styles.paragraph}>
-                  We do not retain personal data on our own servers. Data
-                  collected by third-party services (Unity Ads, Apple, Google)
-                  is subject to their respective retention policies linked
-                  above.
+                <p className={`${styles.paragraph} mt-3`}>
+                  Kampus: Istanbul is a teen-oriented story about university
+                  life. It contains mild romance and friendship themes and no
+                  sexually explicit content, but it is not designed for young
+                  children. Each store assigns its own content rating, which is
+                  shown on the App's store listing.
                 </p>
               </Section>
 
-              <Section title="6. Your Rights">
-                <p className={styles.paragraph}>
+              <Section title="6. Data Retention">
+                <AppliesTo>Both games</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
+                  We do not retain personal data on our own servers for either
+                  App.
+                </p>
+                <ul className="list-disc list-inside mt-3 space-y-1">
+                  <Li>
+                    <strong className="text-white">Dungeon Adventure BloodEclipse:</strong>{" "}
+                    data collected by third-party services (Unity Ads, Apple,
+                    Google) is subject to their respective retention policies
+                    linked above.
+                  </Li>
+                  <Li>
+                    <strong className="text-white">Kampus: Istanbul:</strong>{" "}
+                    save data stays on your device for as long as you keep it,
+                    and is removed when you delete your saves or uninstall the
+                    game.
+                  </Li>
+                </ul>
+              </Section>
+
+              <Section title="7. Your Rights">
+                <AppliesTo>Both games</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
                   Depending on your location (e.g., EEA, UK, California), you
                   may have the right to:
                 </p>
@@ -190,62 +311,58 @@ const GamePrivacy = () => {
                   <Li>Withdraw consent at any time</Li>
                 </ul>
                 <p className={`${styles.paragraph} mt-3`}>
+                  Because Kampus: Istanbul keeps everything on your device and
+                  sends nothing to us, you can exercise these rights for that
+                  App directly by deleting your save files or uninstalling it.
+                  For Dungeon Adventure BloodEclipse, the third-party services
+                  below hold the relevant data:
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
                   To exercise these rights regarding Unity Ads data, visit:{" "}
-                  <a
-                    href="https://unity.com/legal/privacy-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://unity.com/legal/privacy-policy">
                     https://unity.com/legal/privacy-policy
-                  </a>
+                  </ExtLink>
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
                   For Google-related data, visit:{" "}
-                  <a
-                    href="https://myaccount.google.com/data-and-privacy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://myaccount.google.com/data-and-privacy">
                     https://myaccount.google.com/data-and-privacy
-                  </a>
+                  </ExtLink>
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
                   For Apple-related data, visit:{" "}
-                  <a
-                    href="https://privacy.apple.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
-                  >
+                  <ExtLink href="https://privacy.apple.com">
                     https://privacy.apple.com
-                  </a>
+                  </ExtLink>
                 </p>
               </Section>
 
-              <Section title="7. Data Security">
-                <p className={styles.paragraph}>
+              <Section title="8. Data Security">
+                <AppliesTo>Both games</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
                   We take reasonable measures to protect any data processed
-                  through the App. However, no method of transmission over the
+                  through the Apps. However, no method of transmission over the
                   internet or electronic storage is 100% secure. While we
                   strive to use commercially acceptable means to protect your
                   data, we cannot guarantee its absolute security.
                 </p>
               </Section>
 
-              <Section title="8. Changes to This Policy">
-                <p className={styles.paragraph}>
-                  We may update this Privacy Policy from time to time. We will
+              <Section title="9. Changes to This Policy">
+                <AppliesTo>Both games</AppliesTo>
+                <p className={`${styles.paragraph} mt-3`}>
+                  We may update this Privacy Policy from time to time,
+                  including when we add a new game to the list above. We will
                   notify you of any changes by updating the "Last updated" date
-                  at the top of this page. Continued use of the App after such
+                  at the top of this page. Continued use of an App after such
                   changes constitutes acceptance of the updated policy.
                 </p>
               </Section>
 
-              <Section title="9. Contact Us">
+              <Section title="10. Contact Us">
                 <p className={styles.paragraph}>
-                  If you have any questions about this Privacy Policy, please contact us:
+                  If you have any questions about this Privacy Policy, or about
+                  either game, please contact us:
                 </p>
                 <div className="mt-3 space-y-1">
                   <p className="font-poppins text-white text-[16px] font-medium">
@@ -288,6 +405,43 @@ const Section = ({ title, children }) => (
     </h2>
     {children}
   </div>
+);
+
+const Badge = ({ children }) => (
+  <span className="font-poppins text-white text-[13px] leading-[20px] px-3 py-1 rounded-full border border-[#2c2c3e] bg-[rgba(255,255,255,0.03)]">
+    {children}
+  </span>
+);
+
+const AppliesTo = ({ children }) => (
+  <span className="inline-block font-poppins text-secondary text-[12px] leading-[18px] tracking-[0.04em] uppercase px-2.5 py-1 rounded-[4px] border border-[rgba(0,246,255,0.35)] bg-[rgba(0,246,255,0.06)]">
+    Applies to: {children}
+  </span>
+);
+
+const Th = ({ children }) => (
+  <th className="font-poppins font-medium text-white text-[14px] leading-[22px] py-3 pr-5 align-bottom">
+    {children}
+  </th>
+);
+
+const Td = ({ children, className = "" }) => (
+  <td
+    className={`font-poppins font-normal text-dimWhite text-[15px] leading-[24px] py-3 pr-5 align-top ${className}`}
+  >
+    {children}
+  </td>
+);
+
+const ExtLink = ({ href, children }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-secondary hover:underline"
+  >
+    {children}
+  </a>
 );
 
 const Li = ({ children }) => (

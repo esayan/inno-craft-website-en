@@ -78,7 +78,7 @@ const Footer = () => {
           to="/gameprivacy"
           className="font-poppins font-normal text-[14px] text-dimWhite hover:text-secondary transition-colors"
         >
-          Mobile Game Privacy
+          Game Privacy
         </Link>
       </div>
 
