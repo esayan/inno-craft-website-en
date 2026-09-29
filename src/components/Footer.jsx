@@ -80,6 +80,23 @@ const Footer = () => {
         >
           Game Privacy
         </Link>
+        <span className="text-dimWhite text-[14px]">|</span>
+        <span className="font-poppins font-normal text-[14px] text-dimWhite">
+          HopBop:{" "}
+          <a
+            href="/hopbop/privacy/"
+            className="hover:text-secondary transition-colors"
+          >
+            Privacy
+          </a>
+          {" · "}
+          <a
+            href="/hopbop/terms/"
+            className="hover:text-secondary transition-colors"
+          >
+            Terms
+          </a>
+        </span>
       </div>
 
       <div className="w-full flex justify-between items-center md:flex-row flex-col pt-4 border-t-[1px] border-t-[#3F3E45]">

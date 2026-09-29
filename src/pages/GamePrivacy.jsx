@@ -107,6 +107,15 @@ const GamePrivacy = () => {
                   at all: it is ad-free, purchase-free, and plays entirely on
                   your device.
                 </p>
+                <p className={`${styles.paragraph} mt-3`}>
+                  HopBop has its own privacy policy for children:{" "}
+                  <a
+                    href="https://www.inno-craft.com/hopbop/privacy/"
+                    className="text-secondary hover:underline"
+                  >
+                    https://www.inno-craft.com/hopbop/privacy/
+                  </a>
+                </p>
               </Section>
 
               <Section title="3. Data We Collect">
