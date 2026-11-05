@@ -17,7 +17,7 @@ const GAMES = [
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.innocraft.bloodeclipse",
     trailer: "https://youtube.com/shorts/xUEpO_SX8Zo?feature=share",
-    privacy: "/gameprivacy/",
+    privacy: "/bloodeclipse/privacy/",
     terms: "/bloodeclipse/terms/",
   },
   {
@@ -31,7 +31,7 @@ const GAMES = [
     appStore: "https://apps.apple.com/app/id6817522678",
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.innocraft.kampus",
-    privacy: "/gameprivacy/",
+    privacy: "/kampus/privacy/",
     terms: "/kampus/terms/",
   },
   {
