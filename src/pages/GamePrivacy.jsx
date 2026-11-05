@@ -108,6 +108,17 @@ const GamePrivacy = () => {
                   your device.
                 </p>
                 <p className={`${styles.paragraph} mt-3`}>
+                  Each game also has its own terms of use:{" "}
+                  <a href="/bloodeclipse/terms/" className="text-secondary hover:underline">
+                    Dungeon Adventure BloodEclipse
+                  </a>{" "}
+                  and{" "}
+                  <a href="/kampus/terms/" className="text-secondary hover:underline">
+                    Kampus: Istanbul
+                  </a>
+                  .
+                </p>
+                <p className={`${styles.paragraph} mt-3`}>
                   HopBop has its own privacy policy for children:{" "}
                   <a
                     href="https://www.inno-craft.com/hopbop/privacy/"
