@@ -5,6 +5,12 @@ import { Navbar, Footer } from "../components";
 
 const GAMES = [
   {
+    name: "POPQUAD",
+    tag: "Arcade · Intended for ages 13+ · iOS and Android",
+    summary: "Progress and preferences stay on your device. Optional rewarded ads use Google AdMob and UMP, with age-aware privacy choices and optional iOS tracking permission for eligible adults.",
+    privacy: "/popquad/privacy/",
+  },
+  {
     name: "Dungeon Adventure BloodEclipse",
     tag: "Roguelike RPG · 12+ · iOS and Android",
     summary:
@@ -57,7 +63,7 @@ const GamePrivacy = () => {
               Game Privacy Policies
             </h1>
             <p className="font-poppins text-dimWhite text-[16px] mb-10">
-              Inno-Craft LLC · Last updated: November 6, 2026
+              Inno-Craft LLC · Last updated: November 13, 2026
             </p>
 
             <div className="max-w-[800px]">
@@ -65,7 +71,7 @@ const GamePrivacy = () => {
                 Each game has its own policy
               </h2>
               <p className={styles.paragraph}>
-                Inno-Craft LLC publishes three games, and they differ in what
+                Inno-Craft LLC develops games, and they differ in what
                 they do and do not collect. Rather than one combined document,
                 each game has its own privacy policy and terms of use, linked
                 below. Open the policy for the game you are playing.
@@ -97,7 +103,7 @@ const GamePrivacy = () => {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <PolicyLink href={game.privacy}>Privacy Policy</PolicyLink>
-                      <PolicyLink href={game.terms}>Terms of Use</PolicyLink>
+                      {game.terms && <PolicyLink href={game.terms}>Terms of Use</PolicyLink>}
                     </div>
                   </div>
                 ))}
